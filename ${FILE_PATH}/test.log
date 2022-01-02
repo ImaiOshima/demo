@@ -1,0 +1,58 @@
+21:28:25.012 [main] INFO  com.wyh.demo.DemoApplication - Starting DemoApplication on imai-3.local with PID 2386 (/Users/imai/IdeaProjects/springboot-vue/target/classes started by imai in /Users/imai/IdeaProjects/springboot-vue)
+21:28:25.020 [main] DEBUG com.wyh.demo.DemoApplication - Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+21:28:25.021 [main] INFO  com.wyh.demo.DemoApplication - The following profiles are active: test
+21:28:25.590 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+21:28:26.467 [main] WARN  io.undertow.websockets.jsr - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+21:28:26.487 [main] DEBUG io.undertow.session - Setting default session timeout to 1800
+21:28:26.499 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+21:28:26.548 [main] DEBUG io.undertow.session - Registered session listener io.undertow.servlet.core.SessionListenerBridge@403c3a01
+21:28:26.589 [main] DEBUG io.undertow.session - Setting default session timeout to 1800
+21:28:26.648 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+21:28:26.664 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+21:28:27.020 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+21:28:27.021 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+21:28:27.023 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+21:28:27.024 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+21:28:27.024 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+21:28:27.025 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+21:28:27.026 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+21:28:27.026 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+21:28:27.026 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+21:28:27.026 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+21:28:27.026 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+21:28:27.031 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+21:28:27.031 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+21:28:27.032 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+21:28:27.032 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+21:28:27.032 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+21:28:27.399 [main] DEBUG io.undertow - starting undertow server io.undertow.Undertow@7cf63b9a
+21:28:27.406 [main] INFO  org.xnio - XNIO version 3.3.8.Final
+21:28:27.417 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.3.8.Final
+21:28:27.452 [XNIO-1 I/O-1] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@3e3ee726
+21:28:27.452 [XNIO-1 I/O-2] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-2', selector sun.nio.ch.KQueueSelectorImpl@1089999e
+21:28:27.452 [XNIO-1 I/O-3] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-3', selector sun.nio.ch.KQueueSelectorImpl@2dc27c43
+21:28:27.452 [XNIO-1 I/O-4] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-4', selector sun.nio.ch.KQueueSelectorImpl@395eecaa
+21:28:27.452 [XNIO-1 I/O-5] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-5', selector sun.nio.ch.KQueueSelectorImpl@7967ddee
+21:28:27.452 [XNIO-1 I/O-6] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-6', selector sun.nio.ch.KQueueSelectorImpl@7a42056b
+21:28:27.452 [XNIO-1 I/O-7] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-7', selector sun.nio.ch.KQueueSelectorImpl@36869ee3
+21:28:27.452 [XNIO-1 I/O-8] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-8', selector sun.nio.ch.KQueueSelectorImpl@5985817a
+21:28:27.452 [XNIO-1 I/O-9] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-9', selector sun.nio.ch.KQueueSelectorImpl@251d3468
+21:28:27.452 [XNIO-1 I/O-10] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-10', selector sun.nio.ch.KQueueSelectorImpl@3c00bd07
+21:28:27.452 [XNIO-1 I/O-11] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-11', selector sun.nio.ch.KQueueSelectorImpl@1250949d
+21:28:27.452 [XNIO-1 I/O-12] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 I/O-12', selector sun.nio.ch.KQueueSelectorImpl@77c6202d
+21:28:27.453 [XNIO-1 Accept] DEBUG org.xnio.nio - Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@486ce3d7
+21:28:27.453 [main] DEBUG io.undertow - Configuring listener with protocol HTTP for interface 0.0.0.0 and port 8081
+21:28:27.508 [main] INFO  com.wyh.demo.DemoApplication - Started DemoApplication in 3.133 seconds (JVM running for 4.281)
+21:28:58.142 [XNIO-1 task-1] DEBUG io.undertow.request.security - Attempting to authenticate /, authentication required: false
+21:28:58.144 [XNIO-1 task-1] DEBUG io.undertow.request.security - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@30305107 for /
+21:28:58.144 [XNIO-1 task-1] DEBUG io.undertow.request.security - Authentication result was ATTEMPTED for /
+21:28:58.145 [XNIO-1 task-1] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:28:58.254 [XNIO-1 task-2] DEBUG io.undertow.request.security - Attempting to authenticate /favicon.ico, authentication required: false
+21:28:58.254 [XNIO-1 task-2] DEBUG io.undertow.request.security - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@30305107 for /favicon.ico
+21:28:58.254 [XNIO-1 task-2] DEBUG io.undertow.request.security - Authentication result was ATTEMPTED for /favicon.ico
+21:29:07.127 [XNIO-1 task-3] DEBUG io.undertow.request.security - Attempting to authenticate /hello, authentication required: false
+21:29:07.127 [XNIO-1 task-3] DEBUG io.undertow.request.security - Authentication outcome was NOT_ATTEMPTED with method io.undertow.security.impl.CachedAuthenticatedSessionMechanism@30305107 for /hello
+21:29:07.127 [XNIO-1 task-3] DEBUG io.undertow.request.security - Authentication result was ATTEMPTED for /hello
+21:30:07.193 [XNIO-1 I/O-12] DEBUG io.undertow.request - Timing out idle connection from /0:0:0:0:0:0:0:1:62190
+00:26:17.083 [Thread-8] INFO  io.undertow.servlet - Destroying Spring FrameworkServlet 'dispatcherServlet'
+00:26:17.101 [Thread-8] DEBUG io.undertow - stopping undertow server io.undertow.Undertow@7cf63b9a
