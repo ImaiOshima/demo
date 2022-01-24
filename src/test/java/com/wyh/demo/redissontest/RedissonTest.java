@@ -1,8 +1,15 @@
 package com.wyh.demo.redissontest;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.redisson.api.RedissonClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.io.IOException;
 
 /**
  * @author imai
@@ -11,19 +18,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class RedissonTest {
-//    private static final Logger log = LoggerFactory.getLogger(RedissonTest.class);
-//
-//    @Autowired
-//    private RedissonClient redissonClient;
-//
-//    /**
-//     * redisson test config json
-//     * @throws IOException
-//     */
-//    @Test
-//    public void test1() throws IOException {
-//        log.info("redisson的配置信息 {}",redissonClient.getConfig().toJSON());
-//    }
+    //private static final Logger log = LoggerFactory.getLogger(RedissonTest.class);
+    //
+    //@Autowired
+    //private RedissonClient redissonClient;
+    //
+    ///**
+    // * redisson test config json
+    // * @throws IOException
+    // */
+    //@Test
+    //public void test1() throws IOException {
+    //   Bucket
+    //}
 //
 //    @Test
 //    public void test2(){

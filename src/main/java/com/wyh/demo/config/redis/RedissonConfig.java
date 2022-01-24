@@ -22,8 +22,8 @@ public class RedissonConfig {
     @Bean
     public RedissonClient redissonClient() {
         Config config = new Config();
-        config.setCodec(new JsonJacksonCodec()).useSingleServer().setPassword(null)
-                .setAddress(env.getProperty("redisson.host.config"));
+        config.setCodec(new JsonJacksonCodec()).useClusterServers().setPassword(null)
+                .addNodeAddress(env.getProperty("redisson.host.config").split(","));
 
         RedissonClient redisson = Redisson.create(config);
         return redisson;

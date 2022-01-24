@@ -20,6 +20,6 @@ public class Producer {
 
     public void sendMsg(Message msg){
         log.info("发送报文:" + JSON.toJSONString(msg));
-        this.rocketMQTemplate.convertAndSend(Constant.topic,JSON.toJSONString(msg));
+        this.rocketMQTemplate.convertAndSend(Constant.TOPIC,JSON.toJSONString(msg));
     }
 }
