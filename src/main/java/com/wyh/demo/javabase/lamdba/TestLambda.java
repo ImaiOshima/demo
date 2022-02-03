@@ -12,5 +12,7 @@ public class TestLambda {
     @Test
     public void test01(){
         Runnable r1 = () -> System.out.println("hello lambda!");
+        Thread thread = new Thread(r1);
+        thread.start();
     }
 }
