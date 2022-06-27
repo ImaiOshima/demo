@@ -14,6 +14,16 @@ public class InsertionSort {
     }
 
     public static int[] insertionSort(int[] arr){
-        return null;
+        int len = arr.length;
+        for(int i = 0;i<=len-1;i++){
+            int value = arr[i];
+            int j = i - 1;
+            while(j>=0&&arr[j]>value){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = value;
+        }
+        return arr;
     }
 }

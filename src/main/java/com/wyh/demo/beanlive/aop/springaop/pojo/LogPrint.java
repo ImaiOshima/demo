@@ -1,4 +1,4 @@
-package com.wyh.demo.aop.springaop.pojo;
+package com.wyh.demo.beanlive.aop.springaop.pojo;
 
 /**
  * @author imai

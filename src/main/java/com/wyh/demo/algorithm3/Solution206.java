@@ -1,8 +1,5 @@
 package com.wyh.demo.algorithm3;
 
-import com.wyh.demo.util.Utils;
-import org.junit.Test;
-
 /**
  * @Classname Solution206
  * @Description TODO

@@ -6,6 +6,8 @@ import java.util.Arrays;
  * @author imai
  * @since 2021/3/16 8:48 下午
  * 冒泡排序
+ * 始终在数组中找到最大值 往后移动
+ * 时间复杂n2
  */
 public class BubbleSort {
     public static void main(String[] args) {
@@ -15,8 +17,8 @@ public class BubbleSort {
 
     public static int[] bubbleSort(int[] arr){
         int len = arr.length;
-        for(int i = 0;i<len -1;++i){
-            for(int j = 0;j<len-1-i;++j){
+        for(int i = 0; i <= len-1; i++){
+            for(int j = 0; j < len-1-i; j++){
                 if(arr[j] > arr[j+1]){
                     int tmp = arr[j];
                     arr[j] = arr[j+1];

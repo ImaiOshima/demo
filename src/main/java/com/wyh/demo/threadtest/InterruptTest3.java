@@ -9,7 +9,7 @@ public class InterruptTest3 {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while(Thread.currentThread().interrupted()){
+                while(Thread.interrupted()){
                     System.out.println(Thread.currentThread().isInterrupted());
                 }
             }

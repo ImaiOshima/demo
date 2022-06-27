@@ -1,6 +1,6 @@
-package com.wyh.demo.aop.springaop.pojo.impl;
+package com.wyh.demo.beanlive.aop.springaop.pojo.impl;
 
-import com.wyh.demo.aop.springaop.pojo.LogPrint;
+import com.wyh.demo.beanlive.aop.springaop.pojo.LogPrint;
 import org.springframework.stereotype.Component;
 
 /**

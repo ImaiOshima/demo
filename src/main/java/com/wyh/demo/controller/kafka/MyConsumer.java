@@ -14,4 +14,6 @@ public class MyConsumer {
         String value = record.value();
         System.out.println(value);
     }
+
+
 }
