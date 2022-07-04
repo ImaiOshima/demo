@@ -9,6 +9,7 @@ package com.wyh.demo.algorithm3;
  * https://leetcode-cn.com/problems/reverse-linked-list/
  */
 public class Solution206 {
+    //递归
     public ListNode reverseList(ListNode head) {
         if(head == null || head.next == null){
             return head;
@@ -21,5 +22,17 @@ public class Solution206 {
         head.next = null;
         // 例如第一次 返回为 5->4
         return curr;
+    }
+    //迭代
+    public ListNode reverseList1(ListNode head) {
+        ListNode pre = null;
+        ListNode curr = head;
+        if(curr!=null){
+            ListNode tmp = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = tmp;
+        }
+        return pre;
     }
 }
