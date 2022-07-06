@@ -8,7 +8,7 @@ package com.wyh.demo.algorithm3;
  * 反转链表
  * https://leetcode-cn.com/problems/reverse-linked-list/
  */
-public class Solution206 {
+public class LeetCode206 {
     //递归
     public ListNode reverseList(ListNode head) {
         if(head == null || head.next == null){

@@ -1,5 +1,7 @@
 package com.wyh.demo.test;
 
+import org.junit.Test;
+
 /**
  * @Classname B
  * @Description TODO
@@ -7,10 +9,12 @@ package com.wyh.demo.test;
  * @Created by 61635
  */
 public class B {
-    private int a = 1234;
-    static long C = 1111;
-    public long test(long num){
-        long ret = this.a + num + C;
-        return ret;
+    private int end = 1;
+    private int start = 0;
+    int mid;
+    @Test
+    public void test(){
+        String abc = "nabac";
+        System.out.println(abc.substring(1,4));
     }
 }
