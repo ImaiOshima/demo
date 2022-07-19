@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ProducerConsumerTest {
     private Lock lock = new ReentrantLock();
     private Condition condition = lock.newCondition();
-    private boolean hasValue = false;
+    private volatile boolean hasValue = false;
 
     public void producer(){
         lock.lock();

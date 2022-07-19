@@ -2,9 +2,11 @@ package com.wyh.demo.util.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.support.atomic.RedisAtomicLong;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -78,5 +80,12 @@ public class RedisUtil {
             return false;
         }
     }
+
+    public void test(String key, int value, Date expireTime){
+        RedisAtomicLong counter = new RedisAtomicLong(key,redisTemplate.getConnectionFactory());
+        counter.set(value);
+        counter.expireAt(expireTime);
+    }
+
 
 }

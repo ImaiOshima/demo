@@ -1,9 +1,12 @@
 package com.wyh.demo.copy;
 
+import lombok.ToString;
+
 /**
  * @author imai
  * @since 2021/3/12 7:47 下午
  */
+@ToString
 public class Student implements Cloneable{
     private String name;
     private int age;

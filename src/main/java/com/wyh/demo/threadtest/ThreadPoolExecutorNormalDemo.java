@@ -15,6 +15,11 @@ public class ThreadPoolExecutorNormalDemo {
             pool.submit(new PrintTask(i));
         }
         pool.shutdown();
+        ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
+        ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+        ExecutorService scheduledThreadPool  = Executors.newScheduledThreadPool(10);
+        ExecutorService singleThreadScheduledExecutor= Executors.newSingleThreadScheduledExecutor();
     }
     static class PrintTask implements Runnable{
         private final int t;

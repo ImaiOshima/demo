@@ -18,16 +18,14 @@ public class ShallowCopy {
 
         Student student1 = (Student) student.clone();
         System.out.println("拷贝后");
-        System.out.println(student.getName());
-        System.out.println(student1.getAge());
-        System.out.println(student1.getTeacher().getAge());
-        System.out.println(student1.getTeacher().getName());
+        System.out.println(student);
+        System.out.println(student1);
 
         System.out.println("修改老师的信息");
 
         teacher.setName("Games");
         teacher.setAge(3);
-        System.out.println(student1.getTeacher().getName());
-        System.out.println(student1.getTeacher().getAge());
+        System.out.println(student);
+        System.out.println(student1);
     }
 }
