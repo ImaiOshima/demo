@@ -2,6 +2,8 @@ package com.wyh.demo.test;
 
 import org.junit.Test;
 
+import java.util.Date;
+
 /**
  * @Classname B
  * @Description TODO
@@ -16,5 +18,7 @@ public class B {
     public void test(){
         String abc = "nabac";
         System.out.println(abc.substring(1,4));
+        Date date = new Date();
+        System.out.println(date);
     }
 }
