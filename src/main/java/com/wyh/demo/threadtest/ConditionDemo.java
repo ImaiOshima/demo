@@ -12,25 +12,30 @@ public class ConditionDemo {
     private static final Condition CONDITION = lock.newCondition();
 
     public static void main(String[] args) {
-        lock.lock();
-        try {
-            System.out.println("begin wait");
-            CONDITION.await();
-            System.out.println("end wait");
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            lock.unlock();
-        }
-        lock.lock();
-        try {
-            System.out.println("begin wait");
-            CONDITION.signal();
-            System.out.println("end wait");
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            lock.unlock();
-        }
+        new Thread(()-> {
+                lock.lock();
+                try {
+                    System.out.println("begin wait");
+                    CONDITION.await();
+                    System.out.println("end wait");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    lock.unlock();
+                }
+            }
+        ).start();
+        new Thread(()-> {
+            lock.lock();
+            try {
+                System.out.println("begin signal");
+                CONDITION.signal();
+                System.out.println("end signal");
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                lock.unlock();
+            }
+        }).start();
     }
 }

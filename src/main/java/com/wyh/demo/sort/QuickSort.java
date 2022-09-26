@@ -28,6 +28,7 @@ public class QuickSort {
     public static int partition(int[] arr,int left,int right){
         int pivot = left;
         int index = pivot + 1;
+        //根据某个值来排序 所以只能确定之前的值少于这个单位
         for(int i = index;i<=right;i++){
             if(arr[i] < arr[pivot]){
                 swap(arr,i,index);

@@ -27,8 +27,8 @@ public class DoubleThreadPrint {
 
     public static void print(){
         while(i<=100){
+            lock.lock();
             try {
-                lock.lock();
                 System.out.println(Thread.currentThread().getName() +"--"+i );
                 condition.signal();
                 i++;
