@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
  * @author imai
  * @since 2021/5/16 12:56 上午
  */
-@Configuration
+//@Configuration
 public class RocketMQConfig {
 
 }

@@ -1,17 +1,19 @@
 package com.wyh.demo.myabtisplustest;
 
-import com.wyh.demo.dao.UserMapper;
-import com.wyh.demo.domain.User1;
-import com.wyh.demo.util.red.RedPacketUtil;
-import lombok.extern.slf4j.Slf4j;
+import java.math.BigDecimal;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.math.BigDecimal;
-import java.util.List;
+import com.wyh.demo.dao.plus.UserMapper;
+import com.wyh.demo.domain.plus.User;
+import com.wyh.demo.util.red.RedPacketUtil;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author imai
@@ -27,7 +29,7 @@ public class SampleTest {
     @Test
     public void testSelect(){
         System.out.println("---select method test--");
-        List<User1> userList = userMapper.selectList(null);
+        List<User> userList = userMapper.selectList(null);
         userList.forEach(System.out::println);
     }
 

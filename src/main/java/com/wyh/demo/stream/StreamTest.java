@@ -1,10 +1,11 @@
 package com.wyh.demo.stream;
 
-import org.junit.Test;
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
+
+import org.junit.Test;
 
 /**
  * @Classname StreamTest
@@ -25,5 +26,16 @@ public class StreamTest {
         List<Integer> numbers = Arrays.asList(-1, -2, 0, 4, 5);
         long count = numbers.stream().filter( i -> i>0).count();
         System.out.println(count);
+    }
+
+    @Test
+    public void test3(){
+        List<String[]> eggs = new ArrayList<>();
+        eggs.add(new String[]{"鸡蛋_1", "鸡蛋_1", "鸡蛋_1", "鸡蛋_1", "鸡蛋_1"});
+        eggs.add(new String[]{"鸡蛋_2", "鸡蛋_2", "鸡蛋_2", "鸡蛋_2", "鸡蛋_2"});
+        // 每个map生成一个新的stream对象
+        eggs.stream().map(x->Arrays.stream(x).map(s -> s.replace("鸡","煎"))).forEach(x -> System.out.println(x));
+        // flatmap多个对象会生成一个stream对象。
+        eggs.stream().flatMap(x->Arrays.stream(x).map(s -> s.replace("鸡","煎"))).forEach(x -> System.out.println(x));
     }
 }

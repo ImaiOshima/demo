@@ -9,8 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @since 2021/3/28 9:37 下午
  */
 public class ManTest {
-    @Test
-    public void test(){
+    public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         Man man = (Man) applicationContext.getBean("man");
         man.hello();

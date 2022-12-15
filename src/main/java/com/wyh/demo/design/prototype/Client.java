@@ -7,8 +7,11 @@ package com.wyh.demo.design.prototype;
  */
 public class Client {
     public static void main(String[] args) {
-        Prototype prototype = new ConcretePrototype();
-        Prototype clone = prototype.clone();
-        System.out.println(prototype == clone);
+        ConcretePrototypeA concretePrototypeA = new ConcretePrototypeA("concretePrototypeA");
+        ConcretePrototypeA cloneA = concretePrototypeA.clone();
+        cloneA.desc = "a";
+        concretePrototypeA.desc = "b";
+        System.out.println(cloneA);
+        System.out.println(concretePrototypeA);
     }
 }

@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component;
  * @author imai
  * @since 2021/5/16 3:02 下午
  */
-@Component
-@Slf4j
-public class Producer {
-    @Autowired
-    private RocketMQTemplate rocketMQTemplate;
-
-    public void sendMsg(Message msg){
-        log.info("发送报文:" + JSON.toJSONString(msg));
-        this.rocketMQTemplate.convertAndSend(Constant.TOPIC,JSON.toJSONString(msg));
-    }
-}
+//@Component
+//@Slf4j
+//public class Producer {
+//    @Autowired
+//    private RocketMQTemplate rocketMQTemplate;
+//
+//    public void sendMsg(Message msg){
+//        log.info("发送报文:" + JSON.toJSONString(msg));
+//        this.rocketMQTemplate.convertAndSend(Constant.TOPIC,JSON.toJSONString(msg));
+//    }
+//}
