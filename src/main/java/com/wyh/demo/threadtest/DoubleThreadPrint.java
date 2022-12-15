@@ -1,5 +1,6 @@
 package com.wyh.demo.threadtest;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -15,8 +16,8 @@ public class DoubleThreadPrint {
     static final ReentrantLock lock = new ReentrantLock();
     static final Condition condition = lock.newCondition();
     public static void main(String[] args) {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2,5,0L, TimeUnit.SECONDS
-        ,new LinkedBlockingQueue<>());
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2,2,0L, TimeUnit.SECONDS
+        ,new ArrayBlockingQueue<>(10));
         threadPoolExecutor.submit(()->{
             print();
         });
