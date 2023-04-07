@@ -1,6 +1,5 @@
 package com.wyh.demo.beanlive;
 
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,9 +9,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class ManTest {
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(ManConfig.class);
         Man man = (Man) applicationContext.getBean("man");
         man.hello();
-        System.out.println(man);
     }
 }

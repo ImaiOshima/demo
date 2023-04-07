@@ -33,6 +33,6 @@ public class SynchronizedTest {
     }
 
     public static synchronized void sout(){
-        System.out.println(i++);
+        System.out.println(++i);
     }
 }

@@ -1,4 +1,4 @@
-package com.wyh.demo.beanlive.aop.springaop.aspect;
+package com.wyh.demo.aop.springaop.aspect;
 
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
@@ -15,22 +15,22 @@ import org.springframework.stereotype.Component;
 public class LogAspect {
     private Logger logger = LoggerFactory.getLogger(LogAspect.class);
 
-    @Before("execution(* com.wyh.demo.beanlive.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
+    @Before("execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
     public void before(){
         System.out.println("before log");
     }
 
-    @After("execution(* com.wyh.demo.beanlive.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
+    @After("execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
     public void after(){
         System.out.println("after log");
     }
 
-    @AfterReturning("execution(* com.wyh.demo.beanlive.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
+    @AfterReturning("execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
     public void afterRunning(){
         System.out.println("afterRunning log");
     }
 
-    @AfterThrowing("execution(* com.wyh.demo.beanlive.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
+    @AfterThrowing("execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
     public void afterThrowing(){
         System.out.println("afterThrowing log");
     }

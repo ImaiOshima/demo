@@ -2,12 +2,13 @@ package com.wyh.demo.beanlive;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 /**
  * @author imai
@@ -17,7 +18,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Man implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean,
-        DisposableBean, BeanFactoryPostProcessor,BeanPostProcessor {
+        DisposableBean,BeanPostProcessor {
 
     /**
      * 实例化 第一步
@@ -72,11 +73,11 @@ public class Man implements BeanNameAware, BeanFactoryAware, ApplicationContextA
      * @return
      * @throws BeansException
      */
-//    @Override
-//    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-//        System.out.println("第六步:postProcessBeforeInitialization");
-//        return null;
-//    }
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println("第六步:postProcessBeforeInitialization");
+        return bean;
+    }
 
     /**
      * 如果实现了InitializingBean 第七步
@@ -90,6 +91,7 @@ public class Man implements BeanNameAware, BeanFactoryAware, ApplicationContextA
     /**
      * 初始化方法 第八步
      */
+    @PostConstruct
     public void init_method(){
         System.out.println("init_method");
     }
@@ -101,10 +103,11 @@ public class Man implements BeanNameAware, BeanFactoryAware, ApplicationContextA
      * @return
      * @throws BeansException
      */
-//    @Override
-//    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-//        return bean;
-//    }
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+        System.out.println("第九步:postProcessAfterInitialization");
+        return bean;
+    }
 
     /**
      * bean的使用 第十步
@@ -125,12 +128,9 @@ public class Man implements BeanNameAware, BeanFactoryAware, ApplicationContextA
     /**
      * 自定义销毁方法
      */
+    @PreDestroy
     public void init_destroy(){
         System.out.println("第十二步");
     }
 
-    @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        beanFactory.getBean("man");
-    }
 }

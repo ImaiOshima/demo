@@ -1,6 +1,5 @@
 package com.wyh.demo.threadtest;
 
-import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -15,6 +14,7 @@ public class InterruptTest2 {
             while(true){
                 if(Thread.currentThread().isInterrupted()){
                     System.out.println("-----" + Thread.currentThread().isInterrupted());
+                    //充值 线程的被打断状态 静态方法
                     Thread.interrupted();
                     System.out.println("-----"+ Thread.currentThread().isInterrupted());
                 }

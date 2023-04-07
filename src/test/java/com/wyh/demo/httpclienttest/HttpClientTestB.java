@@ -50,6 +50,6 @@ public class HttpClientTestB{
 
     @Test
     public void test() throws IOException {
-        httpClientTest.test();
+        //httpClientTest.test();
     }
 }

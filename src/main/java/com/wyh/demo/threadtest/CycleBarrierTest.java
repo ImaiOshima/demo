@@ -7,7 +7,7 @@ import java.util.concurrent.*;
  * @since 2021/1/6 下午9:41
  */
 public class CycleBarrierTest {
-    private final static CyclicBarrier CYCLIC_BARRIER = new CyclicBarrier(2, () -> {
+    private final static CyclicBarrier CYCLIC_BARRIER = new CyclicBarrier(3, () -> {
         System.out.println(Thread.currentThread());
     });
 
@@ -32,6 +32,16 @@ public class CycleBarrierTest {
                 e.printStackTrace();
             }
             System.out.println("task2 end");
+        });
+
+        threadPoolExecutor.submit(()->{
+            System.out.println("task3 start");
+            try{
+                CYCLIC_BARRIER.await();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            System.out.println("task3 end");
         });
 
         threadPoolExecutor.shutdown();

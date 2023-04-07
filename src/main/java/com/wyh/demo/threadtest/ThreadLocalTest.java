@@ -16,7 +16,7 @@ public class ThreadLocalTest {
                 localVarible.set("thread One");
                 localInteger.set(1);
                 localInteger2.set(8);
-                print("threadOne");
+                //print("threadOne");
                 System.out.println("threadOne remove after " + localVarible.get());
                 System.out.println("threadOne remove after " + localInteger.get());
                 System.out.println("threadOne remove after " + localInteger2.get());
@@ -28,7 +28,7 @@ public class ThreadLocalTest {
                 localVarible.set("thread Two");
                 localInteger.set(2);
                 localInteger2.set(9);
-                print("threadTwo");
+                //print("threadTwo");
                 System.out.println("threadTwo remove after " + localVarible.get());
                 System.out.println("threadTwo remove after " + localInteger.get());
                 System.out.println("threadTwo remove after " + localInteger2.get());

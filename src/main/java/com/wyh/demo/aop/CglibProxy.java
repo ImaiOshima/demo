@@ -1,4 +1,4 @@
-package com.wyh.demo.beanlive.aop;
+package com.wyh.demo.aop;
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
