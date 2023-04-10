@@ -12,7 +12,7 @@ public interface RedDetailMapper {
     int deleteByPrimaryKey(Integer id);
     int insert(RedDetail redDetail);
     int insertSelective(RedDetail redDetail);
-    RedDetail selectByPrimaryKey(Integer id);
+    RedDetail selectByPrimary(Integer id);
     int updateByPrimaryKeySelective(RedDetail redDetail);
     int updateByPrimaryKey(RedDetail redDetail);
 }
