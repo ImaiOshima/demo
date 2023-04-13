@@ -1,7 +1,6 @@
 package com.wyh.demo.threadtest;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
@@ -31,8 +30,8 @@ public class DoubleThreadPrint {
             lock.lock();
             try {
                 System.out.println(Thread.currentThread().getName() +"--"+i );
-                condition.signal();
                 i++;
+                condition.signal();
                 condition.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();

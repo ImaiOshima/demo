@@ -1,4 +1,4 @@
-package com.wyh.demo.beanlive.aop;
+package com.wyh.demo.aop;
 
 /**
  * @author imai

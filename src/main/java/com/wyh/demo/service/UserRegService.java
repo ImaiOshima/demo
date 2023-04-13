@@ -1,19 +1,20 @@
 package com.wyh.demo.service;
 
-import com.wyh.demo.dao.UserRegMapper;
-import com.wyh.demo.domain.UserReg;
-import com.wyh.demo.domain.UserRegDto;
-import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RedissonClient;
+import java.util.Date;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
+import com.wyh.demo.dao.UserRegMapper;
+import com.wyh.demo.domain.UserReg;
+import com.wyh.demo.domain.UserRegDto;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author imai
@@ -22,8 +23,8 @@ import java.util.concurrent.TimeUnit;
 @Service
 @Slf4j
 public class UserRegService {
-    @Autowired
-    private RedissonClient redissonClient;
+    //@Autowired
+    //private RedissonClient redissonClient;
 
     @Autowired
     private UserRegMapper userRegMapper;

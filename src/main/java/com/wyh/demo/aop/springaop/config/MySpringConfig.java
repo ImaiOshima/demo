@@ -1,4 +1,4 @@
-package com.wyh.demo.beanlive.aop.springaop.config;
+package com.wyh.demo.aop.springaop.config;
 
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.ComponentScan;

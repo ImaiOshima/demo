@@ -8,10 +8,6 @@ import java.util.Arrays;
  * 希尓排序
  * 始终在数组中找到最大值 往后移动
  * 时间复杂n2
-
-
-
-
  */
 public class ShellSort {
     public static void main(String[] args) {

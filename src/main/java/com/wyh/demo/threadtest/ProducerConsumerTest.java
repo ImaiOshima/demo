@@ -32,6 +32,7 @@ public class ProducerConsumerTest {
     public void consume(){
         lock.lock();
         try{
+            // 保证先输出的是生产 线程挂起
             while(!hasValue){
                 condition.await();
             }

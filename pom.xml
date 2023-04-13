@@ -204,6 +204,7 @@
             <version>3.2.0</version>
         </dependency>
 
+        <!-- es依赖群 -->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-client</artifactId>

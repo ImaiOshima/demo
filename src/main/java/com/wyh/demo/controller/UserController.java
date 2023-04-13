@@ -6,12 +6,14 @@ import com.wyh.demo.service.UserService;
 import com.wyh.demo.token.TokenService;
 import com.wyh.demo.token.annotate.UserLoginToken;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Scope
 public class UserController {
     @Autowired
     UserService userService;
