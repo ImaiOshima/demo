@@ -3,7 +3,6 @@ package com.wyh.demo.aop.springaop.aspect;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author imai
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
  */
 
 @Aspect
-@Component
 public class LogAspect {
     private Logger logger = LoggerFactory.getLogger(LogAspect.class);
 

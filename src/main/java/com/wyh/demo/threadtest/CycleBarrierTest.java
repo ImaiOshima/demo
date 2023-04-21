@@ -12,8 +12,8 @@ public class CycleBarrierTest {
     });
 
     public static void main(String[] args) {
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5,10,0L,
-                TimeUnit.MICROSECONDS,new LinkedBlockingQueue<>(), new ThreadPoolExecutor.AbortPolicy());
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(3,3,0L,
+                TimeUnit.MICROSECONDS,new ArrayBlockingQueue<>(3), new ThreadPoolExecutor.AbortPolicy());
         threadPoolExecutor.submit(()->{
             System.out.println("task1 start");
             try {
