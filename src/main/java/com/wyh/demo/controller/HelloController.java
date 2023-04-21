@@ -21,8 +21,8 @@ public class HelloController {
 
     private static final String prefix = "hello";
 
-    @Autowired
-    RedisTemplate<String,String> redisTemplate;
+//    @Autowired
+//    RedisTemplate<String,String> redisTemplate;
 
     @Autowired
     UserService userService;
@@ -32,7 +32,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
-        redisTemplate.opsForValue().set("key","value");
+//        redisTemplate.opsForValue().set("key","value");
         return "Hello World";
     }
     @GetMapping("/user/hello")
