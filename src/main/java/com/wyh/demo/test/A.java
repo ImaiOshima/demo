@@ -17,6 +17,8 @@ public class A {
         Arrays.stream(arr).forEach(System.out::println);
         HashMap<String,String> map = new HashMap<>();
         map.put("abc","a");
+        HashSet<String> set = new HashSet<>();
+        set.add("a");
     }
 
     public static void swap(int[] arr, int i,int j){
