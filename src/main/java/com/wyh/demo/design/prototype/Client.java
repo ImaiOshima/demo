@@ -3,7 +3,7 @@ package com.wyh.demo.design.prototype;
 /**
  * @author imai
  * @since 2021/3/28 5:06 下午
- * 调用放
+ * 原型模式
  */
 public class Client {
     public static void main(String[] args) {

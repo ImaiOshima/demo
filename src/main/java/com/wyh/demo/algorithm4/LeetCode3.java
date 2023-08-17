@@ -20,8 +20,7 @@ public class LeetCode3 {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (map.containsKey(c)) {
-                //难点:解决abcb的情况下 当循环下来之后到第二个b之后 判断map中有字符串
-                //比较当前left和当前map中value的左边的位置地址 进行相互比较
+                // 滑动窗口 把左边的边界 提到当前右指针重复的的值的index位置
                 left = Math.max(left,map.get(c)+1);
             }
             max = Math.max(max, i - left + 1);

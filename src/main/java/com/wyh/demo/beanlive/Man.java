@@ -16,7 +16,7 @@ import javax.annotation.PreDestroy;
  * 1.实例化对象 2.设置对象属性 3.如果继承了些Aware接口 就会实现这些接口
  * 4.
  */
-@Component
+//@Component
 public class Man implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean,
         DisposableBean,BeanPostProcessor {
 

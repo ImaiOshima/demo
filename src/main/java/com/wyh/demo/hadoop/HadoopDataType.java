@@ -1,6 +1,5 @@
 package com.wyh.demo.hadoop;
 
-import com.sun.org.apache.xml.internal.utils.res.IntArrayWrapper;
 import org.apache.hadoop.io.ArrayWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
