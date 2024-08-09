@@ -16,7 +16,7 @@ import javax.servlet.MultipartConfigElement;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableScheduling
-@MapperScan(basePackages="com.wyh.demo.dao")
+@MapperScan(basePackages={"com.wyh.demo.dao","com.wyh.demo.forwork.mapper"})
 public class DemoApplication implements CommandLineRunner {
 
     @Autowired

@@ -1,5 +1,7 @@
 package com.wyh.demo.test;
 
+import java.util.Date;
+
 /**
  * @Classname AndTest
  * @Description TODO
@@ -14,6 +16,9 @@ public class AndTest {
         if(a(a) && b(b)){
             System.out.println("&&");
         }
+
+        Date date = new Date();
+        System.out.println(date.getTime());
     }
 
     public static boolean a(int a){
@@ -26,3 +31,5 @@ public class AndTest {
         return b == 2;
     }
 }
+
+

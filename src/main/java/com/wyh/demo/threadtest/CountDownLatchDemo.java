@@ -27,6 +27,7 @@ public class CountDownLatchDemo implements Runnable {
     public void run() {
         try{
             Thread.sleep(new Random().nextInt(10)*1000);
+            System.out.println("the factory: " + Thread.currentThread().getName());
             System.out.println("check complete");
             end.countDown();
         } catch (InterruptedException e) {
