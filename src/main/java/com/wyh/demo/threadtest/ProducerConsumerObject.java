@@ -24,7 +24,7 @@ public class ProducerConsumerObject {
         lock.lock();
         try{
             while(count == item.length){
-                notFull.wait();
+                notFull.await();
             }
             item[putIndex] = x;
             count++;
@@ -35,19 +35,39 @@ public class ProducerConsumerObject {
         }
     }
 
-    public Object take() throws InterruptedException {
+    public void take() throws InterruptedException {
         lock.lock();
         try{
             while(count == 0){
-                notEmpty.wait();
+                notEmpty.await();
             }
             Object x = item[takeIndex];
             count--;
             if(++takeIndex == item.length) takeIndex = 0;
             notFull.signal();
-            return x;
+            System.out.println(x);
         }finally {
             lock.unlock();
         }
+    }
+
+    public static void main(String[] args) {
+        ProducerConsumerObject producerConsumerObject = new ProducerConsumerObject();
+
+        new Thread(() -> {
+            try {
+                producerConsumerObject.put(1);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
+
+        new Thread(() -> {
+            try {
+                producerConsumerObject.take();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
     }
 }

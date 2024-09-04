@@ -1,6 +1,9 @@
 package com.wyh.demo.test;
 
 import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
 
 /**
  * @Classname AndTest
@@ -19,6 +22,15 @@ public class AndTest {
 
         Date date = new Date();
         System.out.println(date.getTime());
+
+        LinkedHashMap<String,String> linkedHashMap = new LinkedHashMap<>();
+        linkedHashMap.put("a","a");
+        linkedHashMap.put("b","b");
+        linkedHashMap.put("a","c");
+
+        for (Map.Entry entry:linkedHashMap.entrySet()){
+            System.out.println(entry.getKey()+" "+entry.getValue());
+        }
     }
 
     public static boolean a(int a){

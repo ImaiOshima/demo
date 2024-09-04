@@ -19,7 +19,7 @@ public class QuickSort {
     public static int[] sort(int[] arr,int left,int right){
         if(left < right){
             int partitionIndex = partition(arr,left,right);
-            sort(arr,left,partitionIndex);
+            sort(arr,left,partitionIndex - 1);
             sort(arr,partitionIndex+1,right);
         }
         return arr;
@@ -28,13 +28,14 @@ public class QuickSort {
     public static int partition(int[] arr,int left,int right){
         int pivot = left;
         int index = pivot + 1;
-        //根据某个值来排序 所以只能确定之前的值少于这个单位
-        for(int i = index;i<=right;i++){
+        // 以left为基础 分成大于arr[left]和小于arr[left] 两部分
+        for(int i = left + 1;i<=right;i++){
             if(arr[i] < arr[pivot]){
                 swap(arr,i,index);
                 index++;
             }
         }
+        // 因为上面小于时 进行了++ 所以现在的arr[index]是大于arr[left]的 所以进行index-- 然后进行替换
         swap(arr,pivot,index - 1);
         return index-1;
     }
