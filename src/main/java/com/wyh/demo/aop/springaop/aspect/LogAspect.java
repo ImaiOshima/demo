@@ -26,10 +26,10 @@ public class LogAspect {
         System.out.println("after log");
     }
 
-//    @AfterReturning("execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
-//    public void afterRunning(JoinPoint jp, User user){
-//        System.out.println("afterRunning log");
-//    }
+    @AfterReturning(value = "execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))",returning = "result")
+    public void afterRunning(Object result){
+        System.out.println("afterRunning log");
+    }
 //
 //    @AfterThrowing("execution(* com.wyh.demo.aop.springaop.pojo.impl.MyLogPrint.doPrint(..))")
 //    public void afterThrowing(JoinPoint jp,RuntimeException e){
