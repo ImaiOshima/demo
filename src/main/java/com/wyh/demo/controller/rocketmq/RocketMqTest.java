@@ -58,5 +58,8 @@ public class RocketMqTest {
         producer.shutdown();
     }
 
+//    public static void main(String[] args) {
+//
+//    }
 
 }
