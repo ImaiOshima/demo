@@ -22,8 +22,8 @@ public class PraiseService implements IPraiseService{
     private Environment env;
     @Autowired
     private PraiseMapper praiseMapper;
-    @Autowired
-    private IRedisPraise redisPraise;
+//    @Autowired
+//    private IRedisPraise redisPraise;
     //@Autowired
     //private RedissonClient redissonClient;
 
