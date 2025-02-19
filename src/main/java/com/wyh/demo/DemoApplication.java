@@ -41,5 +41,4 @@ public class DemoApplication implements CommandLineRunner {
         factory.setMaxRequestSize("102400KB");
         return factory.createMultipartConfig();
     }
-
 }
