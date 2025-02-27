@@ -282,11 +282,17 @@
             <version>1.216</version>
         </dependency>
 
-        <dependency>
-            <groupId>cn.idev.excel</groupId>
-            <artifactId>fastexcel</artifactId>
-            <version>1.0.0</version> <!-- 请确保使用最新版本 -->
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cn.idev.excel</groupId>-->
+<!--            <artifactId>fastexcel</artifactId>-->
+<!--            <version>1.0.0</version> &lt;!&ndash; 请确保使用最新版本 &ndash;&gt;-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.slf4j</groupId>-->
+<!--                    <artifactId>slf4j-api</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
     </dependencies>
 
